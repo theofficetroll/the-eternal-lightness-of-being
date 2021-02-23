@@ -10,7 +10,9 @@ class Container extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      //
+      completedSceneList: [], // Holds list of scenes for which decisions have been made
+      openSceneList: [], // Holds list of scenes which are available but for which no decisions have been made
+      choicesMade: 0, // How many current choices have been locked in
     }
     this.handleClick = this.handleClick.bind(this);
     this.saveProgress = this.saveProgress.bind(this);
@@ -19,8 +21,7 @@ class Container extends React.Component {
 
   handleClick = (e) => {
     e.preventDefault();
-    let action = e.target.value;
-    actionRouter(action);
+    // TODO
   };
 
   // These are stubs
